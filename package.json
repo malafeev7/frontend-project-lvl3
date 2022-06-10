@@ -20,11 +20,6 @@
   },
   "homepage": "https://github.com/malafeev7/frontend-project-lvl3#readme",
   "devDependencies": {
-    "@babel/core": "^7.18.2",
-    "@babel/plugin-transform-async-to-generator": "^7.17.12",
-    "@babel/preset-env": "^7.18.2",
-    "babel-loader": "^8.2.5",
-    "babel-plugin-transform-runtime": "^6.23.0",
     "css-loader": "^6.7.1",
     "eslint": "^8.14.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -37,7 +32,6 @@
     "webpack-dev-server": "^4.9.2"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
     "bootstrap": "^5.2.0-beta1",
     "on-change": "^4.0.1",
     "yup": "^0.32.11"
