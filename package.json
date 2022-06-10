@@ -21,7 +21,7 @@
   "homepage": "https://github.com/malafeev7/frontend-project-lvl3#readme",
   "devDependencies": {
     "css-loader": "^6.7.1",
-    "eslint": "^8.14.0",
+    "eslint": "^8.17.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
