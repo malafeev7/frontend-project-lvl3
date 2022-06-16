@@ -1,20 +1,5 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import getWatchedState from "./watchedState";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import app from './app.js';
 
-const startApp = async () => {
-  const form = document.querySelector("form");
-  const defaultState = {
-    input: "",
-    feeds: [],
-  };
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const formData = new FormData(form);
-    const url = formData.get("url");
-    const watchedState = await getWatchedState(defaultState);
-    watchedState.input = url;
-  });
-};
-
-startApp();
+app();
