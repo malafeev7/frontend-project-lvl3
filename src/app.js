@@ -29,12 +29,12 @@ const getRss = (watchedState, i18nInstance, url) => {
   const state = watchedState;
 
   api(url)
-    .then(response => {
+    .then((response) => {
       toFillingStateFeeds(state, parse(response.data.contents));
       state.urls = uniq([...state.urls, url]);
       state.form.process = 'success';
     })
-    .catch(err => {
+    .catch((err) => {
       if (err.request) {
         state.status.error = 'network.error.request';
       }
@@ -51,11 +51,9 @@ const updateRss = (watchedState, i18nInstance) => {
   const state = watchedState;
   const { urls } = state;
 
-  const promises = urls.map(url =>
-    api(url).then(response => {
-      toFillingStateFeeds(state, parse(response.data.contents));
-    }),
-  );
+  const promises = urls.map((url) => api(url).then((response) => {
+    toFillingStateFeeds(state, parse(response.data.contents));
+  }));
 
   Promise.all(promises).finally(() => {
     setTimeout(() => {
@@ -98,7 +96,7 @@ const formHandler = (e, elements, watchedState, i18nInstance) => {
   });
 
   const process = validate(state.form.fields, state.urls, i18nInstance);
-  process.then(validData => {
+  process.then((validData) => {
     if (!isEmpty(validData)) {
       state.status.error = validData;
       state.form.process = 'error';
@@ -161,11 +159,11 @@ export default () => {
   const { form: formEl, posts: postsEl } = elements;
   const watchedState = onChange(state, render(state, elements, i18nInstance));
 
-  formEl.addEventListener('submit', e => {
+  formEl.addEventListener('submit', (e) => {
     formHandler(e, elements, watchedState, i18nInstance);
   });
 
-  postsEl.addEventListener('click', e => {
+  postsEl.addEventListener('click', (e) => {
     postsHandler(e, elements, watchedState);
   });
 

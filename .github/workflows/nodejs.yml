@@ -5,26 +5,25 @@ on:
   - pull_request
 
 jobs:
-  testing:
+  build:
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
         node-version: [14.x]
+
     steps:
-      - name: git clone frontend-project-lvl3 repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install dependencies
+
+      - name: Run NPM Install
         run: make install
         env:
           CI: true
-      - name: Run linter
+
+      - name: Run Make Linter
         run: make lint
-      - name: Test & publish code coverage
-        uses: paambaati/codeclimate-action@v2.7.5
-        with:
-          coverageCommand: make test-coverage
-          debug: true

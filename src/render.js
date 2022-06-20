@@ -49,7 +49,7 @@ const renderFeedback = (state, elements, i18nInstance, type) => {
   const { url: inputUrl } = elements.fields;
   const value = state.status.error ?? 'network.success.rss';
   const messageContent = isObject(value) ? value.url.message : i18nInstance.t(value);
-  const revertType = str => (str === 'error' ? 'success' : 'error');
+  const revertType = (str) => (str === 'error' ? 'success' : 'error');
 
   messageEL.innerHTML = '';
   messageEL.textContent = messageContent;

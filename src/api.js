@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const buildUrl = url => {
+const buildUrl = (url) => {
   const proxy = 'https://allorigins.hexlet.app';
   const path = 'get';
 
@@ -11,4 +11,4 @@ const buildUrl = url => {
   return newUrl.href;
 };
 
-export default url => axios.get(buildUrl(url));
+export default (url) => axios.get(buildUrl(url));
