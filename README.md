@@ -4,6 +4,6 @@
 
 [![Actions Status](https://github.com/malafeev7/frontend-project-lvl3/workflows/hexlet-check/badge.svg)](https://github.com/malafeev7/frontend-project-lvl3/actions)
 
-<a href="https://codeclimate.com/github/malafeev7/frontend-project-lvl3/maintainability"><img src="https://api.codeclimate.com/v1/badges/32e6432ac3eda108596b/maintainability" /></a>
+[![Node.js CI](https://github.com/malafeev7/frontend-project-lvl3/actions/workflows/nodejs.yml/badge.svg)](https://github.com/malafeev7/frontend-project-lvl3/actions/workflows/nodejs.yml)
 
-[![Actions Status](https://github.com/malafeev7/frontend-project-lvl3/workflows/nodejs/badge.svg)](https://github.com/malafeev7/frontend-project-lvl3/actions)
+<a href="https://codeclimate.com/github/malafeev7/frontend-project-lvl3/maintainability"><img src="https://api.codeclimate.com/v1/badges/32e6432ac3eda108596b/maintainability" /></a>
