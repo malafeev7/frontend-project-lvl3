@@ -10,13 +10,14 @@ const items = (state, i18nInstance) => {
   const { viewedPostsIds } = state.ui;
 
   return feeds
-    .map((item, index) => item.posts
-      .map((post, idx) => {
-        const id = `${index}-${idx}`;
-        const hasViewedId = viewedPostsIds.includes(id);
-        const clsLink = cls[hasViewedId ? 'visited' : 'novisited'];
+    .map((item, index) =>
+      item.posts
+        .map((post, idx) => {
+          const id = `${index}-${idx}`;
+          const hasViewedId = viewedPostsIds.includes(id);
+          const clsLink = cls[hasViewedId ? 'visited' : 'novisited'];
 
-        return `
+          return `
            <li class="list-group-item d-flex justify-content-between align-items-start border-0 border-end-0">
               <a href="${post.link}"
                  class="${clsLink}"
@@ -34,8 +35,9 @@ const items = (state, i18nInstance) => {
              </button>
            </li>
         `;
-      })
-      .join(''))
+        })
+        .join(''),
+    )
     .join('');
 };
 

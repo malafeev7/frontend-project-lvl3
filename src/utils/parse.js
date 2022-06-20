@@ -1,4 +1,4 @@
-const parseFeeds = (document) => {
+const parseFeeds = document => {
   const titleEl = document.querySelector('title');
   const title = titleEl.textContent;
 
@@ -6,7 +6,7 @@ const parseFeeds = (document) => {
   const description = descriptionEl.textContent;
 
   const items = document.querySelectorAll('item');
-  const posts = [...items].map((item) => {
+  const posts = [...items].map(item => {
     const itemTitleEl = item.querySelector('title');
     const itemTitle = itemTitleEl.textContent;
 
@@ -22,7 +22,7 @@ const parseFeeds = (document) => {
   return { title, description, posts };
 };
 
-export default (content) => {
+export default content => {
   const parser = new DOMParser();
   const document = parser.parseFromString(content, 'application/xml');
   const hasError = document.querySelector('parsererror');

@@ -18,16 +18,8 @@ const renderPostToModal = (watchedState, elements, id) => {
   const state = watchedState;
   const { feeds } = state;
   const [feedId, postId] = id.split('-');
-  const {
-    title: postTitle,
-    description: postDescription,
-    link: postLink,
-  } = feeds[feedId].posts[postId];
-  const {
-    title: modalTitle,
-    body: modalBody,
-    link: modalLink,
-  } = elements.modal;
+  const { title: postTitle, description: postDescription, link: postLink } = feeds[feedId].posts[postId];
+  const { title: modalTitle, body: modalBody, link: modalLink } = elements.modal;
 
   modalTitle.innerHTML = '';
   modalTitle.textContent = sanitize(postTitle);
@@ -56,10 +48,8 @@ const renderFeedback = (state, elements, i18nInstance, type) => {
   const { message: messageEL } = elements;
   const { url: inputUrl } = elements.fields;
   const value = state.status.error ?? 'network.success.rss';
-  const messageContent = isObject(value)
-    ? value.url.message
-    : i18nInstance.t(value);
-  const revertType = (str) => (str === 'error' ? 'success' : 'error');
+  const messageContent = isObject(value) ? value.url.message : i18nInstance.t(value);
+  const revertType = str => (str === 'error' ? 'success' : 'error');
 
   messageEL.innerHTML = '';
   messageEL.textContent = messageContent;
