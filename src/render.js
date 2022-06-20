@@ -18,6 +18,7 @@ const renderPostToModal = (watchedState, elements, id) => {
   const state = watchedState;
   const { feeds } = state;
   const [feedId, postId] = id.split('-');
+  // eslint-disable-next-line max-len
   const { title: postTitle, description: postDescription, link: postLink } = feeds[feedId].posts[postId];
   const { title: modalTitle, body: modalBody, link: modalLink } = elements.modal;
 
