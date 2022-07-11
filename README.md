@@ -1,6 +1,6 @@
 <h1 align="center"> Frontend-project-lvl3 </h1>
 
-<h2 align="center">RSS Agregator <a href="https://github.com/malafeev7/frontend-project-lvl3" target="_blank">Click</a></h2>
+<h2 align="center">RSS Agregator <a href="https://frontend-project-lvl3-malafeev7.vercel.app/" target="_blank">Click</a></h2>
 
 [![Actions Status](https://github.com/malafeev7/frontend-project-lvl3/workflows/hexlet-check/badge.svg)](https://github.com/malafeev7/frontend-project-lvl3/actions)
 
